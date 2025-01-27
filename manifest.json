@@ -1,7 +1,14 @@
 {
+  "content_scripts": [
+      {
+      "matches": ["<all_urls>"],
+      "js": ["index.js"]
+      }
+  ],
   "background": {
       "scripts": ["index.js"]
   },
+
   "browser_action": {
     "browser_style": true,
     "default_title": "sessionizer",
@@ -12,7 +19,8 @@
   "manifest_version": 2,
   "name": "tab sessionizer",
   "permissions": [
-    "tabs"
+      "<all_urls>",
+      "tabs"
   ],
   "version": "1.0"
 }
